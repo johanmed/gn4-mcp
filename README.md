@@ -107,6 +107,43 @@ What is checked:
 4. The same tool with a token succeeds
 5. `group_traits BXD` (the 15k-trait listing) comes back truncated
 
+### Example
+
+Query: What are the classical traits available in GN for HS rats?
+
+```
+Here's the complete picture of **classical (published/phenotype) traits** for HS (Heterogeneous Stock) rats in GN4 — three groups, no expression probesets included:
+
+## 1. HSNIH-Palmer — NIH Heterogeneous Stock (Palmer) — **508 phenotype traits**
+- **505 traits from "Unpublished data from HSNIH-Palmer group" (Palmer, Chen, Solberg Woods, Flagel, Robinson et al., 2020)** + 3 traits from *"Genetics of nicotine use and the influence of social cues in adolescent rats"* (2020)
+- Overwhelmingly **behavioral / neuropsychiatric** (~465 CNS-behavior + 37 psychiatry-motivation + 8 pharmacology traits)
+- Major assay families (by abbreviation prefix):
+  - `social` (82) — social behavior measures
+  - `reaction` (77) — reaction-time / response measures
+  - `pavca` (67) — **Pavlovian Conditioned Approach** (sign-tracking vs goal-tracking, lever/magazine contacts per day, learning index)
+  - `nicsa` (62) — **nicotine self-administration**
+  - `light` (51) — light–dark box anxiety measures
+  - `locomotor` (32) — locomotor activity
+  - `novelty` (21), `ccc`/`ccp` (29) — cocaine conditioned place preference/sensitization
+  - `elevate` (10) — elevated plus/zero maze
+  - `crf`, `open field`, plus a handful of cofactors/metadata (weight, sex, batch, color)
+
+## 2. HSNIH-RGSMC — NIH HS (Rat Genome Sequencing & Mapping Consortium 2013) — **147 phenotype traits**
+- All from one paper: *Baud et al., "Combined sequence-based and genetic mapping analysis of complex traits in outbred rats," **Nature Genetics** 45:767–775, 2013* (PMID 23708188)
+- Broad physiological phenotyping:
+  - **Musculoskeletal** (43) — femur structure/biomechanics, bone density
+  - **Immunology** (42) — immune traits (EAE/collagen-induced arthritis-related)
+  - **Blood biochemistry / metabolism** (14+8) — glucose tolerance (AUC, G30/G60/G120), lipids, renal/liver function
+  - **CNS behavior** (10) — anxiety assays (open field, zero maze, conditioned freezing, Box-Cox normalized)
+  - **Red blood cell** (9), **cardiovascular** (8, incl. tail-cuff blood pressure, heart weight), **platelet function** (7)
+  - **Skin pigmentation** (4), regeneration, renal, body weight
+
+## 3. HSNIH-Palmer_r4 — HSNIH-Palmer (adipose/liver cohort) — **0 published traits**
+- This newer group (Feb 2026 genotypes) has no phenotype records yet — it currently only carries the two RNA-Seq expression datasets (adipose `HSNIH-PalmerAT0226`, liver `HSNIH-PalmerLiv0226`).
+
+**Total: 655 classical traits** (508 + 147). Want me to pull the actual strain values or QTL peak info for any specific trait (e.g., a `pavca` sign-tracking trait or blood pressure)?
+
+```
 
 ### Implementation notes
 
